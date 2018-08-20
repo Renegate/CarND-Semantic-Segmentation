@@ -95,7 +95,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
     nn_last_layer = tf.layers.conv2d_transpose(layer3_out, num_classes, 16, 8, padding='same',
                                                kernel_initializer=tf.random_normal_initializer(stddev=1e-3),
                                                kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3))
-    
+
     return nn_last_layer
 
 
